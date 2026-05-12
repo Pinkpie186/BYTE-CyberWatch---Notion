@@ -1,8 +1,6 @@
 name: BYTE CyberWatch
 
 on:
-  schedule:
-    - cron: "0 10,16,23 * * *"
   workflow_dispatch:
 
 jobs:
