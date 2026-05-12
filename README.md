@@ -1,6 +1,7 @@
-# 🤖 BYTE CyberWatch — Notion Edition
 
-  ![capa](assets/capa.png)
+
+![capa](assets/capa.png)
+
 ---
 # 🤖 BYTE CyberWatch — Notion Edition
 
