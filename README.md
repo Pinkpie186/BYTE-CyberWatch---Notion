@@ -1,5 +1,9 @@
 # 🤖 BYTE CyberWatch — Notion Edition
 
+  ![capa](assets/capa.png)
+---
+# 🤖 BYTE CyberWatch — Notion Edition
+
 > Repositório público do **BYTE CyberWatch** integrado ao Notion para coleta, organização, classificação e priorização de notícias de cibersegurança.
 
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-orange)
@@ -421,6 +425,8 @@ CRITICAL_VIEW_URL=
 | `CRITICAL_VIEW_URL` | Link opcional para a view de críticos. |
 
 ---
+> Importante: este projeto usa `notion.data_sources.query`, então os valores de `NOTION_DATABASE_ID` e `NOTION_BYTE_DB_ID` devem ser os **Data Source IDs** dos bancos do Notion, não apenas o ID da página ou da view.
+---
 
 ## 🧱 Como configurar o Notion
 
@@ -558,6 +564,14 @@ O projeto já inclui um workflow em:
 
 Ele pode rodar automaticamente em horários definidos e também manualmente pelo botão **Run workflow**.
 
+> O workflow público vem configurado para execução manual via `workflow_dispatch`, evitando execuções automáticas indesejadas. Caso queira deixar para execuções automaticas siga o exemplo
+
+```on:
+  schedule:
+    - cron: "0 10,16,23 * * *"
+  workflow_dispatch:
+```
+
 ### Secrets necessários
 
 No GitHub, configure:
@@ -575,16 +589,6 @@ Caminho:
 Settings → Secrets and variables → Actions → New repository secret
 ```
 ---
-> Importante: este projeto usa `notion.data_sources.query`, então os valores de `NOTION_DATABASE_ID` e `NOTION_BYTE_DB_ID` devem ser os **Data Source IDs** dos bancos do Notion, não apenas o ID da página ou da view.
-
-> O workflow público vem configurado para execução manual via `workflow_dispatch`, evitando execuções automáticas indesejadas. Caso queira deixar para execuções automaticas siga o exemplo
-
-```on:
-  schedule:
-    - cron: "0 10,16,23 * * *"
-  workflow_dispatch:
-```
----
 
 ## 🖼️ Screenshots
 
@@ -592,11 +596,28 @@ Adicione suas imagens na pasta `assets/`.
 
 Exemplos:
 
-```markdown
+### Banco de notícias no Notion
+
 ![Banco de notícias](assets/notion-database.png)
+
+### Card do BYTE
+
 ![Card do BYTE](assets/byte-card.png)
-![Card de notícia](assets/news-card.png)
+
+## Sugestão de propriedades visíveis no card do BYTE
+
+```text
+Missão do Dia
+🎛️ Terminal Card
+📉 Critical Bar 
+📈 Events Bar
+🛡️ Threat State
+Priority Action
 ```
+
+### Card de notícia
+
+![Card de notícia](assets/news-card.png)
 
 ---
 
@@ -612,6 +633,7 @@ Exemplos:
 - Criar dashboard com métricas de categoria e tags.
 - Melhorar detecção de duplicidade de notícias.
 - Permitir configuração de regras por arquivo externo.
+- Ajuste de fuso horário
 
 ---
 
