@@ -1,0 +1,5 @@
+notion-client
+feedparser
+requests
+python-dateutil
+python-dotenv
