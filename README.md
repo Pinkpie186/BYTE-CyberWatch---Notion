@@ -416,8 +416,8 @@ CRITICAL_VIEW_URL=
 | Variável | Função |
 |---|---|
 | `NOTION_TOKEN` | Token da integração do Notion. |
-| `NOTION_DATABASE_ID` | ID do banco de notícias. |
-| `NOTION_BYTE_DB_ID` | ID do banco/card BYTE. |
+| `NOTION_DATABASE_ID` | Data Source ID do Banco de Notícias. |
+| `NOTION_BYTE_DB_ID` | Data Source ID do Banco/Card BYTE. |
 | `CRITICAL_VIEW_URL` | Link opcional para a view de críticos. |
 
 ---
@@ -574,7 +574,16 @@ Caminho:
 ```text
 Settings → Secrets and variables → Actions → New repository secret
 ```
+---
+> Importante: este projeto usa `notion.data_sources.query`, então os valores de `NOTION_DATABASE_ID` e `NOTION_BYTE_DB_ID` devem ser os **Data Source IDs** dos bancos do Notion, não apenas o ID da página ou da view.
 
+> O workflow público vem configurado para execução manual via `workflow_dispatch`, evitando execuções automáticas indesejadas. Caso queira deixar para execuções automaticas siga o exemplo
+
+```on:
+  schedule:
+    - cron: "0 10,16,23 * * *"
+  workflow_dispatch:
+```
 ---
 
 ## 🖼️ Screenshots
@@ -605,6 +614,7 @@ Exemplos:
 - Permitir configuração de regras por arquivo externo.
 
 ---
+
 
 ## 🤝 Como contribuir
 
