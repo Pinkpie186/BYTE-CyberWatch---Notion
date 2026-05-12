@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="assets/capa.png" alt="Capa do BYTE CyberWatch" width="100%">
+  <img src="assets/capa.png" alt="Capa do BYTE CyberWatch" width="90%">
 </p>
 
 ---
