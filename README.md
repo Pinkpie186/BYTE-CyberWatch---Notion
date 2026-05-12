@@ -1,7 +1,8 @@
 
 
-![capa](assets/capa.png)
-
+<p align="center">
+  <img src="assets/capa.png" alt="Capa do BYTE CyberWatch" width="90%">
+</p>
 ---
 # 🤖 BYTE CyberWatch — Notion Edition
 
